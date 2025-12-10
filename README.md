@@ -22,7 +22,7 @@ npm install
    - RPCs for every chain you plan to deploy to
    - `LZ_ENDPOINT_<NETWORK>` values from the official LayerZero docs
 
-3) `deploy/config/networks.ts` already includes the endpoint IDs you provided (Base 30184, BSC 30102, Avalanche 30106, Arbitrum 30110, Berachain 30362, Botanix 30376, Celo 30125, Codex 30323, Ethereum 30101, Gnosis 30145, Hemi 30329, HyperEVM 30367, Ink 30339, Katana 30375, Linea 30183, Mantle 30181, Monad 30390, Optimism 30111, peaq 30302, Plasma 30383, Polygon 30109, Polygon zkEVM 30158, Scroll 30214, Sonic 30332). Verify against the official LayerZero docs before deploying.
+3) `deploy/config/networks.ts` includes the endpoint IDs for the supported set: Ethereum 30101, Base 30184, BSC 30102, Gnosis 30145, Arbitrum 30110, Optimism 30111, Celo 30125, Linea 30183, Monad 30390, Scroll 30214, Avalanche 30106, Sonic 30332. Verify against the official LayerZero docs before deploying.
 
 4) Choose a canonical chain for the initial 1,000,000 WON supply:
    - On that chain set `MINT_THIS_CHAIN=true`

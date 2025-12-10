@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {OFT} from "@layerzerolabs/lz-evm-oapp-v2/contracts/oft/OFT.sol";
 
 /// @notice WON OFT with a 1% transfer tax sent to a treasury address.
@@ -22,7 +23,7 @@ contract WONTaxOFT is OFT {
         address _treasury,
         address _initialRecipient,
         uint256 _initialMint
-    ) OFT("WON", "WON", _endpoint, _delegate) {
+    ) OFT("WON", "WON", _endpoint, _delegate) Ownable(_delegate) {
         require(_treasury != address(0), "treasury zero");
         treasury = _treasury;
 
